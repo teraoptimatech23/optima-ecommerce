@@ -1,0 +1,32 @@
+@import (reference) '../../../styles/variables.less';
+
+.wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: @space-2;
+  padding: @space-16 @space-6;
+  text-align: center;
+}
+
+.icon {
+  display: flex;
+  margin-bottom: @space-2;
+  color: @color-text-light;
+}
+
+.title {
+  font-size: @font-size-lg;
+  font-weight: @font-weight-bold;
+  color: @color-text;
+}
+
+.description {
+  max-width: 260px;
+  font-size: @font-size-sm;
+  color: @color-text-secondary;
+}
+
+.action {
+  margin-top: @space-4;
+}

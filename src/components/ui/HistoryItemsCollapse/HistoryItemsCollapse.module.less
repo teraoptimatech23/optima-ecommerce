@@ -1,0 +1,84 @@
+@import (reference) '../../../styles/variables.less';
+
+.wrap {
+  border-top: 1px solid @color-border;
+}
+
+.toggle {
+  display: flex;
+  align-items: center;
+  gap: @space-2;
+  width: 100%;
+  padding: @space-3 @space-4;
+  font-family: @font-family-base;
+  font-size: @font-size-sm;
+  font-weight: @font-weight-semibold;
+  color: @color-primary;
+  text-align: left;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.chevron {
+  flex-shrink: 0;
+  transition: transform @transition-base;
+}
+
+.chevronOpen {
+  transform: rotate(180deg);
+}
+
+.listWrap {
+  overflow: hidden;
+}
+
+.list {
+  display: flex;
+  flex-direction: column;
+  gap: @space-3;
+  padding: 0 @space-4 @space-4;
+  list-style: none;
+}
+
+.item {
+  display: flex;
+  align-items: center;
+  gap: @space-3;
+}
+
+.itemImage {
+  flex-shrink: 0;
+  width: 48px;
+  height: 48px;
+  object-fit: cover;
+  background-color: @color-bg-section;
+  border-radius: @radius-input;
+}
+
+.itemInfo {
+  flex: 1;
+  min-width: 0;
+}
+
+.itemName {
+  font-size: @font-size-sm;
+  font-weight: @font-weight-medium;
+  color: @color-text;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.itemVariant {
+  margin-top: 2px;
+  font-size: @font-size-xs;
+  color: @color-text-secondary;
+}
+
+.itemQty {
+  flex-shrink: 0;
+  font-size: @font-size-xs;
+  font-weight: @font-weight-medium;
+  color: @color-text-secondary;
+}

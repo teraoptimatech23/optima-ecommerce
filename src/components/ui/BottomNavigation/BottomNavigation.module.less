@@ -1,0 +1,65 @@
+@import (reference) '../../../styles/variables.less';
+
+.nav {
+  // The bottom nav is the last flex child of MainLayout's app shell, so it
+  // stays pinned without `position: fixed` — which would anchor to the
+  // viewport and escape the centered 430px desktop frame (#root). Sitting in
+  // normal flow keeps it inside the frame and always visible while only the
+  // content region scrolls. `relative` + z-index lifts its shadow above that
+  // scrolling content.
+  position: relative;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-shrink: 0;
+  // 80px interactive bar; content-box so the safe-area cushion adds below it
+  // rather than eating into the 80px (border-box is the global default).
+  box-sizing: content-box;
+  height: 80px;
+  padding-bottom: env(safe-area-inset-bottom, 0px);
+  background-color: @color-bg;
+  border-radius: @radius-card @radius-card 0 0;
+  box-shadow: @shadow-nav;
+}
+
+.iconWrap {
+  position: relative;
+  display: inline-flex;
+}
+
+.badge {
+  position: absolute;
+  top: -6px;
+  right: -8px;
+  pointer-events: none;
+}
+
+.item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: @space-1;
+  color: @color-text-light;
+  transition: color @transition-base;
+
+  .label {
+    font-size: @font-size-xs;
+    font-weight: @font-weight-medium;
+  }
+
+  .dot {
+    width: 4px;
+    height: 4px;
+    border-radius: @radius-full;
+    background-color: transparent;
+  }
+}
+
+.active {
+  color: @color-primary;
+
+  .dot {
+    background-color: @color-primary;
+  }
+}

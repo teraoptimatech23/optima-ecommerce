@@ -1,0 +1,28 @@
+@import (reference) '../../../styles/variables.less';
+
+.button {
+  display: inline-flex;
+  align-items: center;
+  gap: @space-2;
+  flex-shrink: 0;
+  height: @control-height;
+  padding: 0 @space-4;
+  font-family: @font-family-base;
+  font-size: @font-size-sm;
+  font-weight: @font-weight-semibold;
+  color: @color-primary;
+  background-color: @color-bg;
+  border: 1px solid @color-border;
+  border-radius: @radius-input;
+  cursor: pointer;
+  transition: border-color @transition-base;
+
+  &:hover {
+    border-color: darken(@color-border, 8%);
+  }
+
+  &:focus-visible {
+    outline: 2px solid @color-primary;
+    outline-offset: 2px;
+  }
+}

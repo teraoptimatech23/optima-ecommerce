@@ -1,0 +1,59 @@
+@import (reference) '../../../styles/variables.less';
+
+// Gap below MainLayout's fixed header (which has no bottom padding).
+.searchRow {
+  display: flex;
+  align-items: center;
+  gap: @space-3;
+  margin-top: @space-6;
+}
+
+.bannerSwiper {
+  margin-top: @space-6;
+
+  // Dots overlay the bottom of the banner (swiper's default absolute
+  // positioning) — just recolor them to match the design system.
+  :global(.swiper-pagination-bullet) {
+    background-color: fade(@color-white, 60%);
+    opacity: 1;
+  }
+
+  :global(.swiper-pagination-bullet-active) {
+    background-color: @color-white;
+  }
+}
+
+.section {
+  margin-top: @space-8;
+}
+
+.sectionHeader {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  margin-bottom: @space-4;
+}
+
+.sectionTitle {
+  font-size: @font-size-xl;
+  font-weight: @font-weight-bold;
+  color: @color-text;
+}
+
+.seeAll {
+  font-size: @font-size-sm;
+  font-weight: @font-weight-semibold;
+  color: @color-primary;
+}
+
+.categoryRow {
+  display: flex;
+  gap: @space-4;
+  overflow-x: auto;
+  scrollbar-width: none;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
+

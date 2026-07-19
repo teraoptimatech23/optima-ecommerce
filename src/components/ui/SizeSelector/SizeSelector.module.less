@@ -1,0 +1,41 @@
+@import (reference) '../../../styles/variables.less';
+
+.row {
+  display: flex;
+  gap: @space-3;
+}
+
+.size {
+  flex: 1;
+  min-width: 0;
+  height: @control-height;
+  font-family: @font-family-base;
+  font-size: @font-size-md;
+  font-weight: @font-weight-semibold;
+  color: @color-text;
+  background-color: @color-bg;
+  border: 1px solid @color-border;
+  border-radius: @radius-input;
+  cursor: pointer;
+  transition: border-color @transition-base, background-color @transition-base,
+    color @transition-base;
+
+  &:hover {
+    border-color: darken(@color-border, 8%);
+  }
+
+  &:focus-visible {
+    outline: 2px solid @color-primary;
+    outline-offset: 2px;
+  }
+}
+
+.selected {
+  color: @color-white;
+  background-color: @color-primary;
+  border-color: @color-primary;
+
+  &:hover {
+    border-color: @color-primary;
+  }
+}

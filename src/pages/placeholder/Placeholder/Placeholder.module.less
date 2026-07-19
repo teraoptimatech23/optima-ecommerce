@@ -1,0 +1,53 @@
+@import (reference) '../../../styles/variables.less';
+
+// Content is shorter than the viewport on most screens, so center it in the
+// available space; on very small viewports it simply scrolls with the rest
+// of MainLayout's content region.
+.wrap {
+  display: flex;
+  min-height: 100%;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: @space-10 @space-4;
+  text-align: center;
+}
+
+.illustration {
+  display: flex;
+  width: 220px;
+  max-width: 100%;
+  margin-bottom: @space-8;
+
+  img {
+    width: 100%;
+    height: auto;
+  }
+}
+
+.title {
+  font-size: @font-size-2xl;
+  font-weight: @font-weight-bold;
+  color: @color-text;
+}
+
+.description {
+  max-width: 300px;
+  margin-top: @space-3;
+  font-size: @font-size-md;
+  line-height: 1.6;
+  color: @color-text-secondary;
+}
+
+.actions {
+  display: flex;
+  flex-direction: column;
+  gap: @space-4;
+  width: 100%;
+  max-width: 340px;
+  margin-top: @space-8;
+}
+
+.actionButton {
+  gap: @space-2;
+}

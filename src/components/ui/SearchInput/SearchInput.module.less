@@ -1,0 +1,44 @@
+@import (reference) '../../../styles/variables.less';
+
+.wrap {
+  position: relative;
+  display: flex;
+  align-items: center;
+  flex: 1;
+}
+
+.icon {
+  position: absolute;
+  left: @space-4;
+  color: @color-text-light;
+  pointer-events: none;
+}
+
+.input {
+  width: 100%;
+  height: @control-height;
+  padding: 0 @space-4 0 @space-10;
+  font-family: @font-family-base;
+  font-size: @font-size-md;
+  font-weight: @font-weight-medium;
+  color: @color-text;
+  background-color: @color-bg-section;
+  border: 1px solid transparent;
+  border-radius: @radius-input;
+  outline: none;
+  transition: border-color @transition-base, box-shadow @transition-base;
+
+  &::placeholder {
+    color: @color-text-light;
+    font-weight: @font-weight-regular;
+  }
+
+  &::-webkit-search-cancel-button {
+    display: none;
+  }
+
+  &:focus {
+    border-color: @color-primary;
+    box-shadow: @shadow-input-focus;
+  }
+}

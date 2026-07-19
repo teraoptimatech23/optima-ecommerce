@@ -1,0 +1,41 @@
+<svg width="360" height="320" viewBox="0 0 360 320" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-hidden="true">
+  <!-- Ground shadow -->
+  <ellipse cx="190" cy="288" rx="130" ry="14" fill="#DCD2FF" />
+
+  <!-- Potted plant -->
+  <g>
+    <path d="M56 268c0-9 7-16 16-16h18c9 0 16 7 16 16v8c0 7-6 13-13 13H69c-7 0-13-6-13-13v-8Z" fill="#FFFFFF" stroke="#E4DBFF" stroke-width="2" />
+    <path d="M85 252c-2-20-18-34-38-33 3 20 18 34 38 33Z" fill="#22C55E" />
+    <path d="M87 250c4-19 22-31 42-28-5 19-23 31-42 28Z" fill="#3FCB6E" />
+    <path d="M83 252V206" stroke="#22C55E" stroke-width="3" stroke-linecap="round" />
+  </g>
+
+  <!-- Pencil, resting diagonally in front of the book stack -->
+  <g transform="rotate(-18 160 246)">
+    <rect x="120" y="238" width="150" height="16" rx="8" fill="#4DA3FF" />
+    <path d="M255 238h20l-12 16-8-4V238Z" fill="#FFC94D" />
+    <path d="M263 246l12-3-4 9-8-6Z" fill="#2B2B2B" />
+  </g>
+
+  <!-- Book stack -->
+  <g>
+    <!-- bottom book -->
+    <rect x="140" y="210" width="190" height="34" rx="6" fill="#8F6FFF" />
+    <rect x="140" y="210" width="190" height="8" rx="4" fill="#7B4DFF" />
+    <!-- middle book -->
+    <rect x="152" y="180" width="166" height="32" rx="6" fill="#FFFFFF" stroke="#E4DBFF" stroke-width="2" />
+    <rect x="152" y="180" width="166" height="8" rx="4" fill="#FFC94D" />
+    <!-- top book -->
+    <rect x="146" y="150" width="178" height="32" rx="6" fill="#6C4DFF" />
+    <rect x="146" y="150" width="178" height="8" rx="4" fill="#5E3CFF" />
+  </g>
+
+  <!-- Graduation cap on top of the stack -->
+  <g transform="translate(235 92)">
+    <path d="M0 22 40 6 80 22 40 38 0 22Z" fill="#2B2B2B" />
+    <path d="M18 30v18c0 7 10 13 22 13s22-6 22-13V30l-22 8-22-8Z" fill="#3A3A3A" />
+    <path d="M78 22v20" stroke="#2B2B2B" stroke-width="3" stroke-linecap="round" />
+    <circle cx="78" cy="46" r="4" fill="#FFC94D" />
+    <path d="M78 26c10 2 10 16 0 20" stroke="#FFC94D" stroke-width="3" stroke-linecap="round" fill="none" />
+  </g>
+</svg>

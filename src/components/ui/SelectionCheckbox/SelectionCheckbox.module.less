@@ -1,0 +1,26 @@
+@import (reference) '../../../styles/variables.less';
+
+.box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  width: 26px;
+  height: 26px;
+  color: @color-white;
+  background-color: @color-bg;
+  border: 1.5px solid @color-border;
+  border-radius: @radius-checkbox;
+  cursor: pointer;
+  transition: background-color @transition-base, border-color @transition-base;
+
+  &:focus-visible {
+    outline: 2px solid @color-primary;
+    outline-offset: 2px;
+  }
+}
+
+.checked {
+  background-color: @color-primary;
+  border-color: @color-primary;
+}

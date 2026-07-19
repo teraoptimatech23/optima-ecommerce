@@ -1,0 +1,12 @@
+@import (reference) '../../../styles/variables.less';
+
+.section {
+  background-color: @color-bg;
+  border-radius: @radius-card;
+  box-shadow: @shadow-card;
+  overflow: hidden;
+
+  > button:not(:last-child) {
+    border-bottom: 1px solid @color-border;
+  }
+}

@@ -1,0 +1,41 @@
+@import (reference) '../../../styles/variables.less';
+
+.wrap {
+  display: inline-flex;
+  align-items: center;
+  gap: @space-1;
+  font-size: @font-size-sm;
+  color: @color-text-secondary;
+  cursor: pointer;
+}
+
+.valueWrap {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+}
+
+.select {
+  appearance: none;
+  -webkit-appearance: none;
+  padding: 0 @space-4 0 2px;
+  font-family: @font-family-base;
+  font-size: @font-size-sm;
+  font-weight: @font-weight-semibold;
+  color: @color-primary;
+  background: none;
+  border: none;
+  cursor: pointer;
+
+  &:focus-visible {
+    outline: 2px solid @color-primary;
+    outline-offset: 2px;
+  }
+}
+
+.chevron {
+  position: absolute;
+  right: 0;
+  color: @color-primary;
+  pointer-events: none;
+}

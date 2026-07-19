@@ -1,0 +1,219 @@
+@import (reference) '../../../styles/variables.less';
+
+// position: relative anchors BottomSheet's absolute overlay to this page's
+// own frame instead of the viewport (see BottomSheet.tsx).
+.screen {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  height: 100dvh;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  gap: @space-3;
+  flex-shrink: 0;
+  padding: calc(@space-5 + env(safe-area-inset-top, 0px)) @page-padding
+    @space-4;
+  background-color: @color-bg;
+}
+
+.headerTitle {
+  font-size: @font-size-lg;
+  font-weight: @font-weight-bold;
+  color: @color-text;
+}
+
+.scroll {
+  flex: 1;
+  min-height: 0;
+  overflow-y: auto;
+  padding: 0 @page-padding @space-4;
+}
+
+// ---------- Sections ----------
+.section {
+  margin-bottom: @space-6;
+}
+
+.sectionHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: @space-4;
+}
+
+.sectionTitle {
+  font-size: @font-size-md;
+  font-weight: @font-weight-bold;
+  color: @color-text;
+}
+
+.changeLabel {
+  font-size: @font-size-sm;
+  font-weight: @font-weight-semibold;
+  color: @color-primary;
+}
+
+// ---------- Address ----------
+.addressCard {
+  padding: @space-4;
+  background-color: @color-bg-section;
+  border-radius: @radius-card;
+}
+
+.addressTop {
+  display: flex;
+  align-items: center;
+  gap: @space-3;
+  margin-bottom: @space-2;
+}
+
+.addressName {
+  font-size: @font-size-md;
+  font-weight: @font-weight-semibold;
+  color: @color-text;
+}
+
+.defaultBadge {
+  padding: 2px @space-2;
+  font-size: @font-size-xs;
+  font-weight: @font-weight-semibold;
+  color: @color-primary;
+  background-color: fade(@color-primary, 10%);
+  border-radius: @radius-full;
+}
+
+.addressDetail {
+  font-size: @font-size-sm;
+  color: @color-text-secondary;
+  line-height: 1.5;
+}
+
+.addressPhone {
+  margin-top: @space-2;
+  font-size: @font-size-sm;
+  color: @color-text-secondary;
+}
+
+// ---------- Shipping/Payment summary rows ----------
+.pickerRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding: @space-4;
+  margin-bottom: @space-4;
+  background-color: @color-bg-section;
+  border: none;
+  border-radius: @radius-card;
+  cursor: pointer;
+  text-align: left;
+}
+
+.pickerText {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  min-width: 0;
+}
+
+.pickerLabel {
+  font-size: @font-size-sm;
+  color: @color-text-secondary;
+}
+
+.pickerValue {
+  font-size: @font-size-md;
+  font-weight: @font-weight-semibold;
+  color: @color-text;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.chevron {
+  flex-shrink: 0;
+  color: @color-text-light;
+}
+
+// ---------- Option list (inside BottomSheet) ----------
+.optionList {
+  display: flex;
+  flex-direction: column;
+  gap: @space-3;
+}
+
+.optionCard {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding: @space-4;
+  background-color: @color-bg-section;
+  border: 1.5px solid transparent;
+  border-radius: @radius-card;
+  cursor: pointer;
+  text-align: left;
+  transition: border-color @transition-base, background-color @transition-base;
+}
+
+.optionActive {
+  border-color: @color-primary;
+  background-color: fade(@color-primary, 4%);
+}
+
+.optionLeft {
+  display: flex;
+  align-items: center;
+  gap: @space-3;
+}
+
+.radioActive {
+  color: @color-primary;
+  flex-shrink: 0;
+}
+
+.radioInactive {
+  color: @color-text-light;
+  flex-shrink: 0;
+}
+
+.optionName {
+  display: block;
+  font-size: @font-size-md;
+  font-weight: @font-weight-medium;
+  color: @color-text;
+}
+
+.optionMeta {
+  display: block;
+  margin-top: 2px;
+  font-size: @font-size-xs;
+  color: @color-text-secondary;
+}
+
+.optionCost {
+  font-size: @font-size-sm;
+  font-weight: @font-weight-semibold;
+  color: @color-text;
+}
+
+.applyButton {
+  margin-top: @space-4;
+}
+
+// ---------- Order Summary ----------
+.summary {
+  margin-top: @space-2;
+}
+
+// ---------- Fixed action bar ----------
+.actionBar {
+  flex-shrink: 0;
+  padding: @space-4 @page-padding
+    calc(@space-4 + env(safe-area-inset-bottom, 0px));
+  background-color: @color-bg;
+}

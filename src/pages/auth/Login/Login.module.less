@@ -1,0 +1,21 @@
+@import (reference) '../../../styles/variables.less';
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: @space-6;
+}
+
+.forgot {
+  font-size: @font-size-sm;
+  font-weight: @font-weight-semibold;
+  color: @color-primary;
+}
+
+// Matches Field's per-input error styling for form-level (non-field) errors.
+.formError {
+  margin-top: -@space-4;
+  font-size: @font-size-sm;
+  color: @color-danger;
+  text-align: center;
+}

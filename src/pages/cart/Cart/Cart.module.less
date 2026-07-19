@@ -1,0 +1,78 @@
+@import (reference) '../../../styles/variables.less';
+
+// MainLayout's content region has no top padding when there's no header
+// slot in use (Cart has none — no logo/search bar in the design).
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: @space-6;
+  margin-bottom: @space-5;
+}
+
+.title {
+  font-size: @font-size-2xl;
+  font-weight: @font-weight-bold;
+  color: @color-text;
+}
+
+.shippingProgress {
+  margin-bottom: @space-5;
+}
+
+.selectionRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: @space-4;
+}
+
+.selectAll {
+  display: flex;
+  align-items: center;
+  gap: @space-3;
+}
+
+.selectAllLabel {
+  font-size: @font-size-md;
+  font-weight: @font-weight-semibold;
+  color: @color-text;
+}
+
+.removeSelected {
+  font-size: @font-size-md;
+  font-weight: @font-weight-semibold;
+  color: @color-primary;
+  background: none;
+  border: none;
+  cursor: pointer;
+
+  &:disabled {
+    color: @color-text-light;
+    cursor: not-allowed;
+  }
+}
+
+.list {
+  display: flex;
+  flex-direction: column;
+  gap: @space-4;
+}
+
+.empty {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: @space-4;
+  padding: @space-16 @space-6;
+  text-align: center;
+}
+
+.emptyIcon {
+  color: @color-text-light;
+}
+
+.emptyText {
+  font-size: @font-size-md;
+  color: @color-text-secondary;
+}

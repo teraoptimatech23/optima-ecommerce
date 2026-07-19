@@ -1,0 +1,25 @@
+@import (reference) '../../../styles/variables.less';
+
+.field {
+  display: flex;
+  flex-direction: column;
+}
+
+.labelRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: @space-3;
+}
+
+.label {
+  font-size: @font-size-md;
+  font-weight: @font-weight-semibold;
+  color: @color-text;
+}
+
+.error {
+  margin-top: @space-2;
+  font-size: @font-size-sm;
+  color: @color-danger;
+}

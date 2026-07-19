@@ -1,0 +1,72 @@
+<svg width="400" height="400" viewBox="0 0 400 400" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-hidden="true">
+  <!-- Backdrop blob -->
+  <path
+    d="M200 55c48 0 78 26 104 54 26 28 52 55 44 92-8 37-46 55-78 74-32 19-58 47-100 47-42 0-71-25-104-47-33-22-64-46-66-84-2-38 26-70 56-96 30-26 60-40 144-40Z"
+    fill="#F1ECFE"
+  />
+
+  <!-- Scattered sparkle decorations -->
+  <g fill="#D9CBFF">
+    <path d="M92 118l4 10 10 4-10 4-4 10-4-10-10-4 10-4 4-10Z" />
+    <path d="M312 262l3 8 8 3-8 3-3 8-3-8-8-3 8-3 3-8Z" />
+    <path d="M76 246l3 7 7 3-7 3-3 7-3-7-7-3 7-3 3-7Z" />
+    <circle cx="256" cy="88" r="4" />
+    <circle cx="322" cy="188" r="3.5" />
+    <circle cx="112" cy="300" r="3.5" />
+  </g>
+
+  <!-- Ground shadow -->
+  <ellipse cx="204" cy="322" rx="92" ry="12" fill="#E4DBFF" />
+
+  <!-- Plant -->
+  <g>
+    <path d="M78 300c0-8 6-14 14-14h20c8 0 14 6 14 14v10c0 6-5 11-11 11H89c-6 0-11-5-11-11v-10Z" fill="#FFFFFF" stroke="#E4DBFF" stroke-width="2" />
+    <path d="M99 262c-4-18-22-30-40-28 4 18 20 30 40 28Z" fill="#C9BAFF" />
+    <path d="M101 258c2-20-10-38-28-44-2 20 10 38 28 44Z" fill="#9B82FF" />
+    <path d="M103 260c8-16 26-22 42-16-8 16-26 22-42 16Z" fill="#6C4DFF" />
+    <path d="M100 262V216" stroke="#6C4DFF" stroke-width="3" stroke-linecap="round" />
+  </g>
+
+  <!-- Box side (right, darker face) -->
+  <path d="M258 200l40-14v118l-40 16V200Z" fill="#5E3CFF" />
+  <!-- Box front face -->
+  <path d="M138 200h120v120H138V200Z" fill="#8F6FFF" />
+  <!-- Box interior opening -->
+  <path d="M138 200h120l40-14H178l-40 14Z" fill="#4527B0" />
+
+  <!-- Left flap (folded open, back-left) -->
+  <path d="M138 200 100 178l14-46 44 22-20 46Z" fill="#C9BAFF" />
+  <!-- Right flap (folded open, back-right, taller) -->
+  <path d="M258 200l40-14 22-58-46 14-16 58Z" fill="#F4F1FF" stroke="#E4DBFF" stroke-width="2" />
+
+  <!-- Sad face on box front -->
+  <g fill="#3A1F9E">
+    <circle cx="176" cy="248" r="5" />
+    <circle cx="222" cy="248" r="5" />
+  </g>
+  <path d="M180 282c8-10 24-10 32 0" stroke="#3A1F9E" stroke-width="4" stroke-linecap="round" fill="none" />
+
+  <!-- Flight trail -->
+  <path
+    d="M212 190c6-14 22-28 40-38 10-6 22-10 30-10"
+    stroke="#8F6FFF"
+    stroke-width="3"
+    stroke-linecap="round"
+    stroke-dasharray="2 8"
+    fill="none"
+  />
+  <path
+    d="M282 142c-6 4-10 12-8 20"
+    stroke="#8F6FFF"
+    stroke-width="3"
+    stroke-linecap="round"
+    stroke-dasharray="2 8"
+    fill="none"
+  />
+
+  <!-- Paper airplane -->
+  <g transform="translate(300 118) rotate(24)">
+    <path d="M0 0 40-14 8 6l-2 16-6-10L0 0Z" fill="#7B4DFF" />
+    <path d="M0 0 8 6l24-14L0 0Z" fill="#5E3CFF" />
+  </g>
+</svg>

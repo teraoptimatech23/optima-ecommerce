@@ -1,0 +1,68 @@
+// ============================================================
+// Global reset + base typography + the mobile app frame.
+// Desktop only centers the mobile application (no responsive
+// layout) as required by docs/UI_GUIDELINES.md.
+// ============================================================
+
+@import (reference) './variables.less';
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  font-family: @font-family-base;
+  font-weight: @font-weight-regular;
+  color: @color-text;
+  background-color: @color-bg-outside;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+// The application itself: a centered mobile column. Height is a floor
+// (min-height), not fixed — the frame grows with its content so nothing
+// ever renders outside it, and the page scrolls naturally when it must.
+#root {
+  width: 100%;
+  max-width: @app-max-width;
+  min-height: 100vh;
+  min-height: 100dvh;
+  margin-inline: auto;
+  background-color: @color-bg;
+}
+
+// Give the frame a device-card treatment only on wider (desktop) viewports.
+// Below this, mobile stays edge-to-edge with no shadow or radius.
+@media (min-width: @app-max-width) {
+  #root {
+    overflow: hidden;
+    border-radius: @radius-card;
+    box-shadow: @shadow-frame;
+  }
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button {
+  font-family: inherit;
+}
+
+input {
+  font-family: inherit;
+}

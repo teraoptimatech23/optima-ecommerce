@@ -1,0 +1,26 @@
+@import (reference) '../../../styles/variables.less';
+
+.labelled {
+  display: flex;
+  align-items: center;
+  gap: @space-4;
+}
+
+.line {
+  flex: 1;
+  height: 1px;
+  background-color: @color-border;
+}
+
+.text {
+  font-size: @font-size-sm;
+  font-weight: @font-weight-medium;
+  color: @color-text-secondary;
+  white-space: nowrap;
+}
+
+.plain {
+  border: none;
+  height: 1px;
+  background-color: @color-border;
+}

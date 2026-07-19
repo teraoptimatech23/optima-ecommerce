@@ -1,0 +1,97 @@
+@import (reference) '../../../styles/variables.less';
+
+.banner {
+  position: relative;
+  min-height: 220px;
+  // Extra bottom padding reserves room for the carousel's pagination dots,
+  // which the parent Swiper absolutely-positions along the bottom edge.
+  padding: @space-6 @space-6 @space-8;
+  // Shows through as a placeholder backdrop (no flash of white) until the
+  // image below has loaded, and behind any transparent image edges.
+  background: @gradient-banner;
+  border-radius: @radius-card;
+  overflow: hidden;
+}
+
+// Fills the banner (including its own padding area) edge to edge — inset:0
+// is relative to .banner's padding box, which already spans the full
+// border-to-border rectangle that overflow+radius clip to.
+.image {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+// Scrim so eyebrow/title/CTA stay legible over any photo.
+.overlay {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  background: @gradient-banner-overlay;
+}
+
+// Positioned (not just z-indexed) so it paints above the absolutely
+// positioned .image/.overlay regardless of source order.
+.content {
+  position: relative;
+  z-index: 2;
+}
+
+.sparkleTop {
+  position: absolute;
+  z-index: 2;
+  top: @space-8;
+  right: 30%;
+  color: fade(@color-white, 70%);
+}
+
+.sparkleBottom {
+  position: absolute;
+  z-index: 2;
+  bottom: @space-10;
+  right: 18%;
+  color: fade(@color-white, 50%);
+}
+
+.eyebrow {
+  font-size: @font-size-sm;
+  font-weight: @font-weight-medium;
+  color: fade(@color-white, 85%);
+}
+
+.title {
+  max-width: 70%;
+  margin-top: @space-2;
+  font-size: @font-size-2xl;
+  font-weight: @font-weight-bold;
+  line-height: 1.15;
+  letter-spacing: -0.02em;
+  color: @color-white;
+}
+
+.cta {
+  margin-top: @space-6;
+  padding: 0 @space-6;
+  height: 44px;
+  font-size: @font-size-sm;
+  font-weight: @font-weight-semibold;
+  color: @color-primary;
+  background-color: @color-white;
+  border: none;
+  border-radius: @radius-button;
+  cursor: pointer;
+  transition: transform @transition-base;
+
+  &:active {
+    transform: translateY(1px);
+  }
+
+  &:focus-visible {
+    outline: 2px solid @color-white;
+    outline-offset: 2px;
+  }
+}

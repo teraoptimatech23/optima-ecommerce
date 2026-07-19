@@ -1,0 +1,26 @@
+@import (reference) '../../../styles/variables.less';
+
+.badge {
+  display: inline-flex;
+  align-items: center;
+  padding: @space-1 @space-3;
+  font-size: @font-size-xs;
+  font-weight: @font-weight-semibold;
+  border-radius: @radius-full;
+  white-space: nowrap;
+}
+
+.completed {
+  color: @color-success;
+  background-color: mix(@color-success, @color-white, 15%);
+}
+
+.pending {
+  color: darken(@color-warning, 8%);
+  background-color: mix(@color-warning, @color-white, 15%);
+}
+
+.cancelled {
+  color: @color-danger;
+  background-color: mix(@color-danger, @color-white, 15%);
+}

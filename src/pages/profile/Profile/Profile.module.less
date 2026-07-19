@@ -1,0 +1,71 @@
+@import (reference) '../../../styles/variables.less';
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.title {
+  font-size: @font-size-2xl;
+  font-weight: @font-weight-bold;
+  color: @color-text;
+}
+
+.iconWrap {
+  position: relative;
+}
+
+.badge {
+  position: absolute;
+  top: -2px;
+  right: -2px;
+  pointer-events: none;
+}
+
+.summary {
+  display: flex;
+  flex-direction: column;
+  gap: @space-4;
+  margin-top: @space-6;
+  padding: @space-5;
+  background-color: @color-category-bg-lavender;
+  border-radius: @radius-card;
+}
+
+.section {
+  margin-top: @space-8;
+}
+
+.sectionHeader {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  margin-bottom: @space-4;
+}
+
+.sectionTitle {
+  font-size: @font-size-xl;
+  font-weight: @font-weight-bold;
+  color: @color-text;
+}
+
+.accountTitle {
+  margin-bottom: @space-4;
+}
+
+.seeAll {
+  font-size: @font-size-sm;
+  font-weight: @font-weight-semibold;
+  color: @color-primary;
+}
+
+.ordersCard {
+  display: flex;
+  justify-content: space-between;
+  gap: @space-1;
+  padding: @space-5 @space-3;
+  background-color: @color-bg;
+  border-radius: @radius-card;
+  box-shadow: @shadow-card;
+}

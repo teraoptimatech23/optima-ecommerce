@@ -1,0 +1,39 @@
+@import (reference) '../../styles/variables.less';
+
+.layout {
+  display: flex;
+  flex-direction: column;
+  // Exactly the frame height (not min-height) so the content region owns the
+  // scroll and the header + bottom nav stay pinned. dvh tracks mobile browser
+  // chrome. Only this page model uses a fixed height; #root itself stays a
+  // min-height floor so auth screens can still grow and scroll as a whole.
+  height: 100vh;
+  height: 100dvh;
+}
+
+.header {
+  flex-shrink: 0;
+  padding: @space-6 @page-padding 0;
+}
+
+.content {
+  flex: 1;
+  // min-height:0 lets this flex child shrink below its content size so its
+  // own overflow scrolls, instead of stretching the shell past the viewport.
+  min-height: 0;
+  overflow-y: auto;
+  // Bottom gutter keeps the last row clear of the footer/nav; both sit
+  // outside this scroll region as normal flex siblings, so content can
+  // never disappear behind them (no fixed-position overlap to account for).
+  padding: 0 @page-padding @space-8;
+}
+
+// Sits between the scrollable content and BottomNavigation as a normal flex
+// sibling (not `position: fixed`) — same reasoning as BottomNavigation
+// itself: `fixed` would anchor to the real viewport and escape the centered
+// desktop frame (#root) instead of staying inside it.
+.footer {
+  flex-shrink: 0;
+  padding: @space-4 @page-padding;
+  background-color: @color-bg;
+}

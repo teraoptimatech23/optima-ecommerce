@@ -1,0 +1,127 @@
+// ============================================================
+// Design tokens — single source of truth for the design system.
+// Values come from docs/UI_GUIDELINES.md and docs/design/*.png.
+// Never hardcode these in component modules; always reference.
+// ============================================================
+
+// ---------- Colors ----------
+@color-primary: #6c4dff;
+@color-primary-gradient-start: #7b4dff;
+@color-primary-gradient-end: #5e3cff;
+@gradient-primary: linear-gradient(
+  180deg,
+  @color-primary-gradient-start 0%,
+  @color-primary-gradient-end 100%
+);
+
+@color-text: #111111;
+@color-text-secondary: #707070;
+@color-text-light: #a0a0a0;
+
+@color-border: #ececec;
+@color-bg: #ffffff;
+@color-bg-section: #f8f8f8;
+@color-bg-outside: #ececec; // desktop surround behind the mobile frame
+
+@color-danger: #ff4d4f;
+@color-success: #22c55e;
+@color-warning: #f59e0b;
+
+@color-white: #ffffff;
+
+// ---------- Category chip accents (Home screen) ----------
+// Each pastel background pairs with a matching icon tint.
+@color-category-bg-lavender: mix(@color-primary, @color-white, 12%);
+@color-category-icon-lavender: @color-primary;
+
+@color-category-bg-mint: #eef8f6;
+@color-category-icon-mint: #17a496;
+
+@color-category-bg-blush: #fdf1ef;
+@color-category-icon-blush: #ef5b4c;
+
+@color-category-bg-peach: #fdf4e7;
+@color-category-icon-peach: #c08a4e;
+
+// ---------- Rating ----------
+@color-rating: #fdbc23;
+
+// ---------- Typography ----------
+@font-family-base: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto,
+  sans-serif;
+
+@font-weight-regular: 400;
+@font-weight-medium: 500;
+@font-weight-semibold: 600;
+@font-weight-bold: 700;
+
+@font-size-xs: 12px;
+@font-size-sm: 14px;
+@font-size-md: 16px;
+@font-size-lg: 18px;
+@font-size-xl: 22px;
+@font-size-2xl: 28px;
+@font-size-logo: 28px;
+
+// ---------- Spacing (4px scale) ----------
+@space-1: 4px;
+@space-2: 8px;
+@space-3: 12px;
+@space-4: 16px;
+@space-5: 20px;
+@space-6: 24px;
+@space-8: 32px;
+@space-10: 40px;
+@space-12: 48px;
+@space-14: 56px;
+@space-16: 64px;
+
+@page-padding: 24px; // horizontal gutter of every screen
+
+// ---------- Radius ----------
+@radius-checkbox: 8px;
+@radius-input: 16px;
+@radius-button: 18px;
+@radius-card: 22px;
+@radius-full: 999px;
+
+// ---------- Sizing ----------
+@control-height: 54px; // inputs + primary button (UI_GUIDELINES)
+@touch-min: 44px; // minimum accessible touch target
+
+// ---------- Shadows ----------
+@shadow-soft: 0 12px 22px rgba(108, 77, 255, 0.3); // primary button glow
+@shadow-soft-hover: 0 14px 28px rgba(108, 77, 255, 0.38);
+@shadow-card: 0 4px 16px rgba(17, 17, 17, 0.06);
+@shadow-input-focus: 0 0 0 4px rgba(108, 77, 255, 0.12);
+@shadow-frame: 0 0 60px rgba(17, 17, 17, 0.08); // desktop frame lift
+@shadow-nav: 0 -4px 16px rgba(17, 17, 17, 0.06); // fixed bottom nav lift
+
+// ---------- Promo banner ----------
+@gradient-banner: linear-gradient(
+  135deg,
+  lighten(@color-primary-gradient-start, 12%) 0%,
+  lighten(@color-primary-gradient-end, 8%) 100%
+);
+
+// Scrim over the banner's photo so the eyebrow/title/CTA stay legible on
+// any image — darker toward the bottom where the CTA sits.
+@gradient-banner-overlay: linear-gradient(
+  180deg,
+  fade(@color-text, 10%) 0%,
+  fade(@color-text, 55%) 100%
+);
+
+// ---------- Product gallery backdrop ----------
+// Soft lavender wash behind product imagery (Product Detail hero).
+@gradient-gallery: linear-gradient(
+  180deg,
+  mix(@color-primary, @color-white, 9%) 0%,
+  mix(@color-primary, @color-white, 18%) 100%
+);
+
+// ---------- App frame ----------
+@app-max-width: 430px;
+
+// ---------- Motion ----------
+@transition-base: 200ms ease;

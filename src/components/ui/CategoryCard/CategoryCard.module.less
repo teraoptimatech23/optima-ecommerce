@@ -1,0 +1,54 @@
+@import (reference) '../../../styles/variables.less';
+
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: @space-2;
+  flex-shrink: 0;
+  width: 64px;
+  padding: 0;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.iconWrap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 64px;
+  height: 64px;
+  border-radius: @radius-card;
+  transition: box-shadow @transition-base;
+}
+
+.active {
+  box-shadow: 0 0 0 2px fade(@color-primary, 25%);
+}
+
+.label {
+  font-size: @font-size-sm;
+  font-weight: @font-weight-medium;
+  color: @color-text;
+}
+
+.lavender {
+  background-color: @color-category-bg-lavender;
+  color: @color-category-icon-lavender;
+}
+
+.mint {
+  background-color: @color-category-bg-mint;
+  color: @color-category-icon-mint;
+}
+
+.blush {
+  background-color: @color-category-bg-blush;
+  color: @color-category-icon-blush;
+}
+
+.peach {
+  background-color: @color-category-bg-peach;
+  color: @color-category-icon-peach;
+}

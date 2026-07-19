@@ -1,0 +1,39 @@
+@import (reference) '../../../styles/variables.less';
+
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: @space-2;
+  width: 100%;
+  height: @control-height;
+  padding: 0 @space-6;
+  font-size: @font-size-lg;
+  font-weight: @font-weight-semibold;
+  color: @color-primary;
+  background-color: @color-bg;
+  border: 1.5px solid @color-primary;
+  border-radius: @radius-button;
+  cursor: pointer;
+  transition: background-color @transition-base, transform @transition-base,
+    opacity @transition-base;
+
+  &:hover {
+    background-color: @color-category-bg-lavender;
+  }
+
+  &:active {
+    transform: translateY(1px);
+  }
+
+  &:focus-visible {
+    outline: 2px solid @color-primary;
+    outline-offset: 3px;
+  }
+
+  &:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+    transform: none;
+  }
+}

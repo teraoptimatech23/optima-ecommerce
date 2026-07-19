@@ -1,0 +1,189 @@
+@import (reference) '../../../styles/variables.less';
+
+.screen {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  height: 100dvh;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  gap: @space-3;
+  flex-shrink: 0;
+  padding: calc(@space-5 + env(safe-area-inset-top, 0px)) @page-padding
+    @space-4;
+  background-color: @color-bg;
+}
+
+.headerTitle {
+  font-size: @font-size-lg;
+  font-weight: @font-weight-bold;
+  color: @color-text;
+}
+
+.scroll {
+  flex: 1;
+  min-height: 0;
+  overflow-y: auto;
+  padding: 0 @page-padding @space-4;
+}
+
+.methodCard {
+  display: flex;
+  flex-direction: column;
+  gap: @space-1;
+  padding: @space-4;
+  margin-bottom: @space-6;
+  background-color: @color-bg-section;
+  border-radius: @radius-card;
+}
+
+.methodLabel {
+  font-size: @font-size-sm;
+  color: @color-text-secondary;
+}
+
+.methodValue {
+  font-size: @font-size-md;
+  font-weight: @font-weight-semibold;
+  color: @color-text;
+}
+
+.summary {
+  margin-top: @space-2;
+}
+
+.actionBar {
+  flex-shrink: 0;
+  padding: @space-4 @page-padding
+    calc(@space-4 + env(safe-area-inset-bottom, 0px));
+  background-color: @color-bg;
+}
+
+// ---------- Success state ----------
+// Standalone confirmation screen — no header, logo, notification icon, or
+// bottom nav (Payment never wraps itself in MainLayout, so there's none to
+// hide). Not vertically centered: with the order card + update card + two
+// buttons, content is tall enough that centering would look unbalanced on
+// short viewports, so it flows from the top and scrolls if needed.
+.successScreen {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  align-items: center;
+  overflow-y: auto;
+  padding: @space-10 @page-padding @space-8;
+  text-align: center;
+}
+
+.successIconWrap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 130px;
+  height: 130px;
+  margin-bottom: @space-6;
+  background: @gradient-primary;
+  border-radius: @radius-full;
+  box-shadow: @shadow-soft;
+}
+
+.successIcon {
+  color: @color-white;
+}
+
+.successTitle {
+  font-size: @font-size-2xl;
+  font-weight: @font-weight-bold;
+  color: @color-text;
+}
+
+.successText {
+  margin-top: @space-3;
+  font-size: @font-size-md;
+  line-height: 1.6;
+  color: @color-text-secondary;
+}
+
+.orderCard {
+  display: flex;
+  flex-direction: column;
+  gap: @space-3;
+  width: 100%;
+  margin-top: @space-8;
+  padding: @space-5;
+  border: 1px solid @color-border;
+  border-radius: @radius-card;
+  text-align: left;
+}
+
+.orderRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: @space-3;
+}
+
+.orderLabel {
+  font-size: @font-size-md;
+  color: @color-text-secondary;
+}
+
+.orderValue {
+  font-size: @font-size-md;
+  font-weight: @font-weight-bold;
+  color: @color-text;
+}
+
+.updateCard {
+  display: flex;
+  align-items: flex-start;
+  gap: @space-3;
+  width: 100%;
+  margin-top: @space-5;
+  padding: @space-5;
+  background-color: @color-category-bg-lavender;
+  border-radius: @radius-card;
+  text-align: left;
+}
+
+.updateIconWrap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  width: 40px;
+  height: 40px;
+  color: @color-primary;
+  background-color: @color-bg;
+  border-radius: @radius-full;
+}
+
+.updateTitle {
+  font-size: @font-size-md;
+  font-weight: @font-weight-bold;
+  color: @color-text;
+}
+
+.updateText {
+  margin-top: @space-1;
+  font-size: @font-size-sm;
+  line-height: 1.5;
+  color: @color-text-secondary;
+}
+
+.viewOrderButton {
+  margin-top: @space-8;
+}
+
+.backHome {
+  margin-top: @space-4;
+  font-size: @font-size-md;
+  font-weight: @font-weight-semibold;
+  color: @color-primary;
+  background: none;
+  border: none;
+  cursor: pointer;
+}

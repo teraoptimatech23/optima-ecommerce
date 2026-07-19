@@ -1,0 +1,40 @@
+@import (reference) '../../../styles/variables.less';
+
+.card {
+  display: flex;
+  padding: @space-5 @space-2;
+  background-color: @color-bg;
+  border-radius: @radius-card;
+  box-shadow: @shadow-card;
+}
+
+.item {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  align-items: center;
+  gap: @space-1;
+  padding: 0 @space-2;
+  border-right: 1px solid @color-border;
+
+  &:last-child {
+    border-right: none;
+  }
+}
+
+.icon {
+  display: flex;
+  margin-bottom: @space-1;
+  color: @color-primary;
+}
+
+.value {
+  font-size: @font-size-lg;
+  font-weight: @font-weight-bold;
+  color: @color-text;
+}
+
+.label {
+  font-size: @font-size-xs;
+  color: @color-text-secondary;
+}

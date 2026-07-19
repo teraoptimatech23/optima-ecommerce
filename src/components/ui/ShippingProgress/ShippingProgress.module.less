@@ -1,0 +1,26 @@
+@import (reference) '../../../styles/variables.less';
+
+.banner {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  column-gap: @space-3;
+  row-gap: @space-3;
+  align-items: center;
+  padding: @space-4;
+  background-color: @color-category-bg-lavender;
+  border-radius: @radius-card;
+}
+
+.icon {
+  color: @color-primary;
+}
+
+.message {
+  font-size: @font-size-sm;
+  font-weight: @font-weight-semibold;
+  color: @color-primary;
+}
+
+.progress {
+  grid-column: 1 / -1;
+}

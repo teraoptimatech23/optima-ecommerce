@@ -1,0 +1,57 @@
+@import (reference) '../../../styles/variables.less';
+
+// Flat on the page background — matches both E-summary.png and
+// E-checkout.png, which show this as plain labeled rows, no card chrome.
+.card {
+  display: flex;
+  flex-direction: column;
+}
+
+.title {
+  margin-bottom: @space-4;
+  font-size: @font-size-xl;
+  font-weight: @font-weight-bold;
+  color: @color-text;
+}
+
+.row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: @space-2 0;
+}
+
+.label {
+  font-size: @font-size-md;
+  color: @color-text-secondary;
+}
+
+.value {
+  font-size: @font-size-md;
+  font-weight: @font-weight-medium;
+  color: @color-text;
+}
+
+.discount {
+  font-size: @font-size-md;
+  font-weight: @font-weight-medium;
+  color: @color-text;
+}
+
+.divider {
+  height: 1px;
+  margin: @space-3 0;
+  background-color: @color-border;
+}
+
+.totalLabel {
+  font-size: @font-size-lg;
+  font-weight: @font-weight-bold;
+  color: @color-text;
+}
+
+.totalValue {
+  font-size: @font-size-xl;
+  font-weight: @font-weight-bold;
+  color: @color-primary;
+}

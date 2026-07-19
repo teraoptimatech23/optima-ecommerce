@@ -1,0 +1,41 @@
+@import (reference) '../../../styles/variables.less';
+
+.chip {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: @space-2;
+  flex-shrink: 0;
+  width: 64px;
+  padding: 0;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.iconWrap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 64px;
+  height: 64px;
+  color: @color-text-secondary;
+  background-color: @color-bg;
+  border-radius: @radius-card;
+  box-shadow: @shadow-card;
+  transition: color @transition-base, background-color @transition-base,
+    box-shadow @transition-base;
+}
+
+.active {
+  color: @color-category-icon-lavender;
+  background-color: @color-category-bg-lavender;
+  box-shadow: none;
+}
+
+.label {
+  font-size: @font-size-sm;
+  font-weight: @font-weight-medium;
+  color: @color-text;
+  text-align: center;
+}

@@ -1,0 +1,48 @@
+@import (reference) '../../../styles/variables.less';
+
+.item {
+  display: flex;
+  align-items: center;
+  gap: @space-3;
+  width: 100%;
+  padding: @space-4 @space-5;
+  font-family: @font-family-base;
+  text-align: left;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.iconChip {
+  display: flex;
+  flex-shrink: 0;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  color: @color-category-icon-lavender;
+  background-color: @color-category-bg-lavender;
+  border-radius: @radius-input;
+}
+
+.danger {
+  color: @color-danger;
+  background-color: fade(@color-danger, 10%);
+}
+
+.label {
+  flex: 1;
+  font-size: @font-size-md;
+  font-weight: @font-weight-medium;
+  color: @color-text;
+}
+
+.dangerLabel {
+  color: @color-danger;
+  font-weight: @font-weight-semibold;
+}
+
+.chevron {
+  flex-shrink: 0;
+  color: @color-text-light;
+}

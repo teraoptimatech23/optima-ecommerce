@@ -1,0 +1,202 @@
+@import (reference) '../../../styles/variables.less';
+
+// App shell: a scrollable region above a fixed action bar. Mirrors the
+// MainLayout technique but with an Add-to-Cart bar instead of the bottom nav,
+// so the button stays visible without `position: fixed` (which would escape
+// the centered desktop frame).
+// position: relative anchors BottomSheet's absolute overlay to this page's
+// own frame instead of the viewport (see BottomSheet.tsx).
+.screen {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  height: 100dvh;
+}
+
+.scroll {
+  flex: 1;
+  min-height: 0;
+  overflow-y: auto;
+}
+
+// ---------- Gallery ----------
+.gallery {
+  position: relative;
+  aspect-ratio: 1 / 1;
+  background: @gradient-gallery;
+}
+
+.topBar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: calc(@space-5 + env(safe-area-inset-top, 0px)) @page-padding
+    @space-4;
+}
+
+.topActions {
+  display: flex;
+  gap: @space-3;
+}
+
+.wishlisted {
+  color: @color-danger;
+}
+
+.swiper {
+  height: 100%;
+
+  :global(.swiper-slide) {
+    height: 100%;
+  }
+}
+
+.image {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.counter {
+  position: absolute;
+  right: @page-padding;
+  bottom: @space-8;
+  z-index: 2;
+  padding: @space-1 @space-3;
+  font-size: @font-size-sm;
+  font-weight: @font-weight-semibold;
+  color: @color-text;
+  background-color: fade(@color-white, 85%);
+  border-radius: @radius-full;
+}
+
+// ---------- Info card ----------
+.info {
+  position: relative;
+  z-index: 1;
+  // Pull the rounded card up over the base of the gallery.
+  margin-top: -@space-5;
+  padding: @space-6 @page-padding;
+  background-color: @color-bg;
+  border-radius: @radius-card @radius-card 0 0;
+}
+
+.titleRow {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: @space-4;
+}
+
+.title {
+  flex: 1;
+  font-size: @font-size-2xl;
+  font-weight: @font-weight-bold;
+  letter-spacing: -0.02em;
+  color: @color-text;
+}
+
+.category {
+  margin-top: @space-2;
+  font-size: @font-size-md;
+  color: @color-text-secondary;
+}
+
+.price {
+  display: block;
+  margin-top: @space-4;
+}
+
+.section {
+  margin-top: @space-6;
+}
+
+.sectionHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: @space-4;
+}
+
+.sectionTitle {
+  font-size: @font-size-lg;
+  font-weight: @font-weight-bold;
+  color: @color-text;
+}
+
+.sizeGuide {
+  font-size: @font-size-sm;
+  font-weight: @font-weight-medium;
+  color: @color-text-secondary;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.description {
+  font-size: @font-size-md;
+  line-height: 1.6;
+  color: @color-text-secondary;
+}
+
+.clamped {
+  display: -webkit-box;
+  -webkit-line-clamp: 4;
+  line-clamp: 4;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.readMore {
+  margin-top: @space-3;
+  font-size: @font-size-md;
+  font-weight: @font-weight-semibold;
+  color: @color-primary;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+// ---------- Fixed action bar ----------
+.actionBar {
+  flex-shrink: 0;
+  padding: @space-4 @page-padding
+    calc(@space-4 + env(safe-area-inset-bottom, 0px));
+  background-color: @color-bg;
+}
+
+.addToCart {
+  gap: @space-2;
+}
+
+// ---------- Added-to-cart success sheet ----------
+.successIcon {
+  align-self: center;
+  margin-bottom: @space-4;
+  color: @color-success;
+}
+
+.successText {
+  margin-bottom: @space-6;
+  font-size: @font-size-md;
+  color: @color-text-secondary;
+  text-align: center;
+}
+
+.continueShopping {
+  align-self: center;
+  margin-top: @space-4;
+  font-size: @font-size-md;
+  font-weight: @font-weight-semibold;
+  color: @color-primary;
+  background: none;
+  border: none;
+  cursor: pointer;
+}

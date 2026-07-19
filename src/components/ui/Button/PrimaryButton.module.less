@@ -1,0 +1,40 @@
+@import (reference) '../../../styles/variables.less';
+
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: @control-height;
+  padding: 0 @space-6;
+  font-size: @font-size-lg;
+  font-weight: @font-weight-semibold;
+  color: @color-white;
+  background: @gradient-primary;
+  border: none;
+  border-radius: @radius-button;
+  box-shadow: @shadow-soft;
+  cursor: pointer;
+  transition: transform @transition-base, box-shadow @transition-base,
+    opacity @transition-base;
+
+  &:hover {
+    box-shadow: @shadow-soft-hover;
+  }
+
+  &:active {
+    transform: translateY(1px);
+  }
+
+  &:focus-visible {
+    outline: 2px solid @color-primary;
+    outline-offset: 3px;
+  }
+
+  &:disabled {
+    opacity: 0.6;
+    box-shadow: none;
+    cursor: not-allowed;
+    transform: none;
+  }
+}

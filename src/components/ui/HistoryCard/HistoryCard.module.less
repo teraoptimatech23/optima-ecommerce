@@ -1,0 +1,99 @@
+@import (reference) '../../../styles/variables.less';
+
+// Card chrome lives here (not on .preview) so the expandable items section
+// can sit below the preview button as a sibling, inside the same surface.
+.card {
+  width: 100%;
+  background-color: @color-bg;
+  border: 1px solid @color-border;
+  border-radius: @radius-card;
+  box-shadow: @shadow-card;
+  overflow: hidden;
+}
+
+.preview {
+  display: flex;
+  align-items: flex-start;
+  gap: @space-3;
+  width: 100%;
+  padding: @space-4;
+  font-family: @font-family-base;
+  text-align: left;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.image {
+  flex-shrink: 0;
+  width: 96px;
+  height: 96px;
+  object-fit: cover;
+  background-color: @color-bg-section;
+  border-radius: @radius-input;
+}
+
+.info {
+  display: flex;
+  flex-direction: column;
+  gap: @space-1;
+  flex: 1;
+  min-width: 0;
+}
+
+.topRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: @space-2;
+}
+
+.label {
+  font-size: @font-size-xs;
+  color: @color-text-secondary;
+}
+
+.orderId {
+  font-size: @font-size-md;
+  font-weight: @font-weight-bold;
+  color: @color-text;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.productName {
+  font-size: @font-size-sm;
+  font-weight: @font-weight-medium;
+  color: @color-text;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.meta {
+  display: flex;
+  align-items: center;
+  gap: @space-1;
+  font-size: @font-size-xs;
+  color: @color-text-secondary;
+}
+
+.total {
+  margin-top: @space-1;
+  font-size: @font-size-lg;
+}
+
+.payment {
+  display: flex;
+  align-items: center;
+  gap: @space-1;
+  font-size: @font-size-xs;
+  color: @color-text-secondary;
+}
+
+.chevron {
+  flex-shrink: 0;
+  align-self: center;
+  color: @color-text-light;
+}

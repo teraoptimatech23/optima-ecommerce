@@ -1,0 +1,33 @@
+@import (reference) '../../../styles/variables.less';
+
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  width: @touch-min;
+  height: @touch-min;
+  border: none;
+  border-radius: @radius-full;
+  color: @color-text;
+  cursor: pointer;
+  transition: transform @transition-base, box-shadow @transition-base;
+
+  &:active {
+    transform: scale(0.94);
+  }
+
+  &:focus-visible {
+    outline: 2px solid @color-primary;
+    outline-offset: 2px;
+  }
+}
+
+.default {
+  background-color: @color-bg-section;
+}
+
+.floating {
+  background-color: @color-bg;
+  box-shadow: @shadow-card;
+}

@@ -1,0 +1,49 @@
+@import (reference) '../../../styles/variables.less';
+
+.stepper {
+  display: inline-flex;
+  align-items: stretch;
+  height: 40px;
+  border: 1px solid @color-border;
+  border-radius: @radius-input;
+  overflow: hidden;
+}
+
+.button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  color: @color-text;
+  background: none;
+  border: none;
+  cursor: pointer;
+  transition: background-color @transition-base, color @transition-base;
+
+  &:hover:not(:disabled) {
+    background-color: @color-bg-section;
+  }
+
+  &:disabled {
+    color: @color-text-light;
+    cursor: not-allowed;
+  }
+
+  &:focus-visible {
+    outline: 2px solid @color-primary;
+    outline-offset: -2px;
+  }
+}
+
+.value {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 40px;
+  padding: 0 @space-2;
+  font-size: @font-size-md;
+  font-weight: @font-weight-semibold;
+  color: @color-text;
+  border-left: 1px solid @color-border;
+  border-right: 1px solid @color-border;
+}

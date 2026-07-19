@@ -1,0 +1,63 @@
+@import (reference) '../../../styles/variables.less';
+
+.screen {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  min-height: 100dvh;
+  padding: @space-10 @page-padding @space-8;
+}
+
+.logo {
+  align-self: center;
+  margin-top: @space-8;
+  margin-bottom: @space-10;
+}
+
+.intro {
+  margin-bottom: @space-10;
+  text-align: center;
+}
+
+.title {
+  font-size: @font-size-2xl;
+  font-weight: @font-weight-bold;
+  letter-spacing: -0.02em;
+  color: @color-text;
+}
+
+.subtitle {
+  margin-top: @space-4;
+  font-size: @font-size-md;
+  font-weight: @font-weight-regular;
+  color: @color-text-secondary;
+}
+
+.divider {
+  margin-top: @space-8;
+  margin-bottom: @space-6;
+}
+
+.socials {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: @space-4;
+}
+
+.footer {
+  margin-top: @space-10;
+  font-size: @font-size-md;
+  font-weight: @font-weight-medium;
+  color: @color-text;
+  text-align: center;
+}
+
+.footerLink {
+  display: inline-block;
+  // Invisible hit-slop: expands the tap target toward @touch-min without
+  // shifting surrounding text (padding offset by an equal negative margin).
+  padding: @space-3 @space-1;
+  margin: -@space-3 -@space-1;
+  font-weight: @font-weight-semibold;
+  color: @color-primary;
+}

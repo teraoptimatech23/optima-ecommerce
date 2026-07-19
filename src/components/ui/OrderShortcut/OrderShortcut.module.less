@@ -1,0 +1,32 @@
+@import (reference) '../../../styles/variables.less';
+
+.item {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  align-items: center;
+  gap: @space-2;
+  padding: 0;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.iconWrap {
+  position: relative;
+  display: flex;
+  color: @color-text-secondary;
+}
+
+.badge {
+  position: absolute;
+  top: -6px;
+  right: -8px;
+}
+
+.label {
+  font-size: @font-size-xs;
+  font-weight: @font-weight-medium;
+  color: @color-text;
+  text-align: center;
+}

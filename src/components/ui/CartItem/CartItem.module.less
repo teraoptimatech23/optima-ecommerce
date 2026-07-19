@@ -1,0 +1,76 @@
+@import (reference) '../../../styles/variables.less';
+
+.item {
+  display: flex;
+  gap: @space-4;
+}
+
+.image {
+  flex-shrink: 0;
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  background-color: @color-bg-section;
+  border-radius: @radius-card;
+}
+
+.body {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  min-width: 0;
+}
+
+.top {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: @space-3;
+}
+
+.title {
+  font-size: @font-size-md;
+  font-weight: @font-weight-bold;
+  color: @color-text;
+}
+
+.remove {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  width: @touch-min;
+  height: @touch-min;
+  margin: -@space-3;
+  color: @color-text-light;
+  background: none;
+  border: none;
+  cursor: pointer;
+  transition: color @transition-base;
+
+  &:hover {
+    color: @color-danger;
+  }
+
+  &:focus-visible {
+    outline: 2px solid @color-primary;
+    outline-offset: 2px;
+  }
+}
+
+.variant {
+  margin-top: @space-1;
+  font-size: @font-size-sm;
+  color: @color-text-secondary;
+}
+
+.price {
+  margin-top: @space-3;
+}
+
+.qtyReadOnly {
+  margin-top: @space-3;
+  font-size: @font-size-sm;
+  font-weight: @font-weight-medium;
+  color: @color-text-secondary;
+}

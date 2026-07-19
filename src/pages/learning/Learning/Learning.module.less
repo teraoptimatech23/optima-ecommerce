@@ -1,0 +1,59 @@
+@import (reference) '../../../styles/variables.less';
+
+.searchRow {
+  display: flex;
+  align-items: center;
+  gap: @space-3;
+  margin-top: @space-6;
+  margin-bottom: @space-6;
+}
+
+.section {
+  margin-top: @space-8;
+}
+
+.sectionHeader {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  margin-bottom: @space-4;
+}
+
+.sectionTitle {
+  font-size: @font-size-xl;
+  font-weight: @font-weight-bold;
+  color: @color-text;
+  margin-bottom: @space-4;
+}
+
+.sectionHeader .sectionTitle {
+  margin-bottom: 0;
+}
+
+.seeAll {
+  font-size: @font-size-sm;
+  font-weight: @font-weight-semibold;
+  color: @color-primary;
+}
+
+.categoryRow {
+  display: flex;
+  gap: @space-4;
+  overflow-x: auto;
+  scrollbar-width: none;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+.courseRow {
+  display: flex;
+  gap: @space-4;
+  overflow-x: auto;
+  scrollbar-width: none;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
