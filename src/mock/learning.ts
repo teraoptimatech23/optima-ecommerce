@@ -1,4 +1,9 @@
-import { productPlaceholder } from '../data/productPlaceholder'
+import { productPlaceholder } from '../data/productPlaceholder';
+import l1 from "../assets/images/learning/l1.png";
+import l2 from "../assets/images/learning/l2.png";
+import l3 from "../assets/images/learning/l3.png";
+import l4 from "../assets/images/learning/l4.png";
+import l5 from "../assets/images/learning/l5.png";
 
 export interface LearningBannerData {
   eyebrow: string
@@ -59,7 +64,7 @@ export const continueLearningCourse: ContinueLearningCourse = {
   id: 'l1',
   title: 'Digital Photography Basics',
   instructor: 'Johnson Lee',
-  thumbnail: productPlaceholder('#8F6FFF', '#5E3CFF'),
+  thumbnail: l1,
   progress: 60,
   remainingTime: '2h 30m left',
   totalLessons: 12,
@@ -70,7 +75,7 @@ export const recommendedCourses: RecommendedCourse[] = [
     id: 'l2',
     title: 'UI/UX Design Fundamentals',
     instructor: 'Sarah Chen',
-    thumbnail: productPlaceholder('#7B4DFF', '#4527B0'),
+    thumbnail: l2,
     rating: 4.8,
     reviewCount: 1200,
     difficulty: 'Beginner',
@@ -81,7 +86,7 @@ export const recommendedCourses: RecommendedCourse[] = [
     id: 'l3',
     title: 'Web Development for Beginners',
     instructor: 'David Kim',
-    thumbnail: productPlaceholder('#2B2B3A', '#111111'),
+    thumbnail: l3,
     rating: 4.7,
     reviewCount: 980,
     difficulty: 'Beginner',
@@ -92,7 +97,7 @@ export const recommendedCourses: RecommendedCourse[] = [
     id: 'l4',
     title: 'Drawing Essentials',
     instructor: 'Olivia Brown',
-    thumbnail: productPlaceholder('#F4F1FF', '#C9BAFF'),
+    thumbnail: l4,
     rating: 4.9,
     reviewCount: 1500,
     difficulty: 'All Levels',
@@ -103,7 +108,7 @@ export const recommendedCourses: RecommendedCourse[] = [
     id: 'l5',
     title: 'Digital Marketing Mastery',
     instructor: 'Michael Torres',
-    thumbnail: productPlaceholder('#17A496', '#0D6E64'),
+    thumbnail: l1,
     rating: 4.6,
     reviewCount: 740,
     difficulty: 'Intermediate',
@@ -114,7 +119,7 @@ export const recommendedCourses: RecommendedCourse[] = [
     id: 'l6',
     title: 'Photography Lighting Techniques',
     instructor: 'Johnson Lee',
-    thumbnail: productPlaceholder('#EF5B4C', '#C0392B'),
+    thumbnail: l5,
     rating: 4.8,
     reviewCount: 610,
     difficulty: 'Advanced',
@@ -125,7 +130,7 @@ export const recommendedCourses: RecommendedCourse[] = [
     id: 'l7',
     title: 'Business Strategy 101',
     instructor: 'Amanda Wells',
-    thumbnail: productPlaceholder('#C08A4E', '#8A5F2E'),
+    thumbnail: l1,
     rating: 4.5,
     reviewCount: 890,
     difficulty: 'Beginner',
