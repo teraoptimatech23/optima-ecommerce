@@ -1,4 +1,3 @@
-import { productPlaceholder } from '../data/productPlaceholder';
 import l1 from "../assets/images/learning/l1.png";
 import l2 from "../assets/images/learning/l2.png";
 import l3 from "../assets/images/learning/l3.png";
