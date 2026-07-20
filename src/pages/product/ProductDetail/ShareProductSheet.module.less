@@ -1,0 +1,60 @@
+@import (reference) '../../../styles/variables.less';
+
+.copyLink {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: @space-3;
+  width: 100%;
+  min-height: @control-height;
+  margin-bottom: @space-6;
+  font-size: @font-size-md;
+  font-weight: @font-weight-semibold;
+  color: @color-primary;
+  background-color: @color-bg-section;
+  border: none;
+  border-radius: @radius-card;
+  cursor: pointer;
+  transition: background-color @transition-base;
+
+  &:active {
+    background-color: fade(@color-primary, 8%);
+  }
+}
+
+.platformGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: @space-4;
+  margin-bottom: @space-6;
+}
+
+.platform {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: @space-2;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.platformIcon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 52px;
+  height: 52px;
+  transition: transform @transition-base;
+}
+
+.platform:active .platformIcon {
+  transform: scale(0.92);
+}
+
+.platformName {
+  font-size: @font-size-xs;
+  font-weight: @font-weight-medium;
+  color: @color-text-secondary;
+  text-align: center;
+}

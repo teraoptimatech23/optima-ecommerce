@@ -10,6 +10,7 @@ import Price from '../../../components/ui/Price/Price'
 import SizeSelector from '../../../components/ui/SizeSelector/SizeSelector'
 import PrimaryButton from '../../../components/ui/Button/PrimaryButton'
 import BottomSheet from '../../../components/ui/BottomSheet/BottomSheet'
+import ShareProductSheet from './ShareProductSheet'
 import { getProductById } from '../../../services/product.service'
 import { useCart } from '../../../hooks/useCart'
 import styles from './ProductDetail.module.less'
@@ -22,6 +23,7 @@ const ProductDetail = () => {
   const [wishlisted, setWishlisted] = useState(false)
   const [expanded, setExpanded] = useState(false)
   const [successSheetOpen, setSuccessSheetOpen] = useState(false)
+  const [shareSheetOpen, setShareSheetOpen] = useState(false)
   const { addItem } = useCart()
 
   const product = id ? getProductById(id) : undefined
@@ -46,6 +48,7 @@ const ProductDetail = () => {
                 icon={<Share size={20} strokeWidth={2} />}
                 variant="floating"
                 aria-label="Share product"
+                onClick={() => setShareSheetOpen(true)}
               />
               <IconButton
                 icon={
@@ -163,6 +166,12 @@ const ProductDetail = () => {
           Continue Shopping
         </button>
       </BottomSheet>
+
+      <ShareProductSheet
+        open={shareSheetOpen}
+        onClose={() => setShareSheetOpen(false)}
+        productId={product.id}
+      />
     </div>
   )
 }

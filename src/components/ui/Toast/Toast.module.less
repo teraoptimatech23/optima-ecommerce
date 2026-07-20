@@ -1,0 +1,25 @@
+@import (reference) '../../../styles/variables.less';
+
+.toast {
+  position: absolute;
+  left: 50%;
+  bottom: calc(@space-10 + env(safe-area-inset-bottom, 0px));
+  z-index: 30;
+  display: inline-flex;
+  align-items: center;
+  gap: @space-2;
+  max-width: calc(100% - @page-padding * 2);
+  padding: @space-3 @space-5;
+  font-size: @font-size-sm;
+  font-weight: @font-weight-semibold;
+  color: @color-white;
+  background-color: @color-text;
+  border-radius: @radius-full;
+  box-shadow: @shadow-card;
+  white-space: nowrap;
+}
+
+.icon {
+  flex-shrink: 0;
+  color: @color-success;
+}

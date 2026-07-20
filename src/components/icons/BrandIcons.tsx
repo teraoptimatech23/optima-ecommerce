@@ -87,3 +87,91 @@ export const MastercardIcon = ({ size = 20 }: BrandIconProps) => (
     <path d="M12 6.35a7 7 0 0 0 0 11.3 7 7 0 0 0 0-11.3z" fill="#FF5F00" />
   </svg>
 )
+
+/** Social share mark, brand color circle background. */
+export const WhatsAppIcon = ({ size = 26 }: BrandIconProps) => (
+  <svg
+    width={size}
+    height={size}
+    viewBox="0 0 32 32"
+    role="presentation"
+    aria-hidden="true"
+    focusable="false"
+  >
+    <circle cx="16" cy="16" r="16" fill="#25D366" />
+    <path
+      d="M16 7c-4.97 0-9 4.03-9 9 0 1.6.42 3.1 1.16 4.4L7 25l4.75-1.14A8.96 8.96 0 0 0 16 25c4.97 0 9-4.03 9-9s-4.03-9-9-9Zm5.02 12.68c-.21.6-1.23 1.15-1.7 1.2-.44.05-.99.07-1.6-.1-.37-.1-.84-.27-1.45-.53-2.55-1.1-4.22-3.67-4.35-3.84-.13-.17-1.04-1.38-1.04-2.64 0-1.25.66-1.87.9-2.12.23-.25.5-.31.67-.31h.48c.15 0 .36-.06.56.43.21.5.71 1.74.77 1.87.06.13.1.28.02.45-.08.17-.13.28-.25.43-.13.15-.27.34-.38.46-.13.13-.26.27-.11.53.15.26.68 1.12 1.46 1.82 1 .9 1.85 1.18 2.11 1.31.26.13.41.11.56-.07.15-.17.65-.76.82-1.02.17-.26.34-.21.56-.13.23.09 1.45.68 1.7.81.26.13.43.19.49.3.06.11.06.62-.15 1.22Z"
+      fill="#fff"
+    />
+  </svg>
+)
+
+/** Social share mark, brand color circle background. */
+export const FacebookIcon = ({ size = 26 }: BrandIconProps) => (
+  <svg
+    width={size}
+    height={size}
+    viewBox="0 0 32 32"
+    role="presentation"
+    aria-hidden="true"
+    focusable="false"
+  >
+    <circle cx="16" cy="16" r="16" fill="#1877F2" />
+    <path
+      d="M20.2 16.5h-2.9V25h-3.5v-8.5h-2v-3h2v-2.2c0-2.15 1.02-3.8 3.9-3.8h2.65v3h-1.85c-.5 0-1 .3-1 1.05v1.95h2.9l-.2 3Z"
+      fill="#fff"
+    />
+  </svg>
+)
+
+/** Social share mark, official gradient circle background. */
+export const InstagramIcon = ({ size = 26 }: BrandIconProps) => (
+  <svg
+    width={size}
+    height={size}
+    viewBox="0 0 32 32"
+    role="presentation"
+    aria-hidden="true"
+    focusable="false"
+  >
+    <defs>
+      <radialGradient id="instagramGradient" cx="30%" cy="107%" r="150%">
+        <stop offset="0%" stopColor="#FED576" />
+        <stop offset="26%" stopColor="#F47133" />
+        <stop offset="61%" stopColor="#BC3081" />
+        <stop offset="100%" stopColor="#4C63D2" />
+      </radialGradient>
+    </defs>
+    <circle cx="16" cy="16" r="16" fill="url(#instagramGradient)" />
+    <rect
+      x="9.5"
+      y="9.5"
+      width="13"
+      height="13"
+      rx="3.8"
+      fill="none"
+      stroke="#fff"
+      strokeWidth="1.6"
+    />
+    <circle cx="16" cy="16" r="3.4" fill="none" stroke="#fff" strokeWidth="1.6" />
+    <circle cx="20.3" cy="11.7" r="0.9" fill="#fff" />
+  </svg>
+)
+
+/** Social share mark, brand color circle background. */
+export const TelegramIcon = ({ size = 26 }: BrandIconProps) => (
+  <svg
+    width={size}
+    height={size}
+    viewBox="0 0 32 32"
+    role="presentation"
+    aria-hidden="true"
+    focusable="false"
+  >
+    <circle cx="16" cy="16" r="16" fill="#26A5E4" />
+    <path
+      d="M22.9 10.3 20.7 22c-.17.75-.6.93-1.22.58l-3.38-2.5-1.63 1.57c-.18.18-.33.33-.68.33l.24-3.44 6.27-5.67c.27-.24-.06-.38-.42-.14l-7.75 4.88-3.34-1.04c-.72-.23-.74-.72.15-1.06l13.06-5.04c.6-.22 1.13.14.94 1.13Z"
+      fill="#fff"
+    />
+  </svg>
+)
