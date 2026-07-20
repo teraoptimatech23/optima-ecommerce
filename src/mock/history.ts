@@ -1,10 +1,4 @@
 import type { TransactionStatus } from '../components/ui/StatusBadge/StatusBadge'
-import shoesImage from '../assets/images/products/shoes.svg'
-import hoodieImage from '../assets/images/products/hoodie.svg'
-import backpackImage from '../assets/images/products/backpack.svg'
-import tshirtImage from '../assets/images/products/tshirt.svg'
-import bagImage from '../assets/images/products/bag.svg'
-import capImage from '../assets/images/products/cap.svg'
 import s2 from '../assets/images/product/s1.png';
 import s3 from '../assets/images/product/s2.png';
 import s4 from '../assets/images/product/s3.png';
